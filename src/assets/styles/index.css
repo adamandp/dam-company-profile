@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./shadcn.css";
+@import "./spacing.css";
+
+@custom-variant dark (&: is(.dark *));
+
+@font-face {
+  font-family: "Phonk";
+  src: url("/src/assets/fonts/Phonk.otf") format("opentype");
+}
+@font-face {
+  font-family: "TT-Commons";
+  src: url("/src/assets/fonts/TT-Commons-demibold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Broadaers";
+  src: url("/src/assets/fonts/Brodaers.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TT-Commons-Bold";
+  src: url("/src/assets/fonts/tt_commons_bold.otf") format("truetype");
+}
+
+@theme reference {
+  --font-syne: "Syne", "sans-serif";
+  --font-phonk: "Phonk", "sans-serif";
+  --font-rubik: "Rubik Mono One", "sans-serif";
+  --font-tt-commons: "TT-Commons", "sans-serif";
+  --font-broadaers: "Broadaers", "sans-serif";
+  --font-bowlby: "Bowlby One SC", "sans-serif";
+  --font-tt-commons-bold: "TT-Commons-Bold", "sans-serif";
+  --font-shrikhand-regular: "Shrikhand", "serif";
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: clamp(calc(27px * 0.35), calc(10 / 1920 * 100vw), 27px)
+      clamp(calc(27px * 0.35), calc(10 / 1920 * 100vw), 27px) 0 0 #171717;
+  }
+  .card-aboutus-shadow {
+    box-shadow: clamp(calc(33px * 0.35), calc(33 / 1920 * 100vw), 33px)
+      clamp(calc(22px * 0.35), calc(22 / 1920 * 100vw), 22px) 0 0 #171717;
+  }
+  .tab-shadow {
+    box-shadow: clamp(calc(6px * 0.35), calc(6 / 1920 * 100vw), 6px)
+      clamp(calc(6px * 0.35), calc(6 / 1920 * 100vw), 6px) 0 0 #171717;
+  }
+  .res-border {
+    @apply border-2 md:border-3 lg:border-4;
+  }
+  .main-container {
+    @apply max-w-[1920px] mx-auto;
+  }
+  .shine {
+    @apply before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1000ms];
+  }
+}
+
+.slider-container {
+  @apply w-full max-w-[2000px] mx-auto h-auto !drop-shadow-none;
+  .slick-track {
+    @apply flex py-c-20 shadow-none drop-shadow-none;
+    .slick-slide {
+      @apply px-3 grid place-items-center drop-shadow-none;
+    }
+  }
+  .slick-dots {
+    @apply -bottom-[clamp(50px,4.167vw,80px)];
+    li button:before {
+      @apply text-gray-400 text-[clamp(10px,0.729vw,14px)];
+    }
+    .slick-active button:before {
+      @apply text-[#F83D8E] text-[clamp(14px,1.042vw,20px)];
+    }
+  }
+}

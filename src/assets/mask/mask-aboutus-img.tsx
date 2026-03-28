@@ -1,4 +1,4 @@
-import { SVGAttributes } from "lucide-react";
+import { type SVGAttributes } from "lucide-react";
 
 export default function MaskAboutUsImg({ className, style }: SVGAttributes) {
   return (

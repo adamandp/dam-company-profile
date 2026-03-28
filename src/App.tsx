@@ -1,5 +1,6 @@
 import { AboutUsSection } from "./components/about-us-section";
 import { MainSection } from "./components/main-section";
+import { ReviewSection } from "./components/reviews-section";
 import { ServicesSection } from "./components/services-section";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <AboutUsSection />
       <div className="bg-[#4271FF]">
         <ServicesSection />
+        <ReviewSection />
       </div>
     </main>
   );

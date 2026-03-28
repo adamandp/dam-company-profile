@@ -1,5 +1,6 @@
 import { AboutUsSection } from "./components/about-us-section";
 import FAQSection from "./components/faq-section";
+import FooterSection from "./components/footer-section";
 import { MainSection } from "./components/main-section";
 import { ReviewSection } from "./components/reviews-section";
 import { ServicesSection } from "./components/services-section";
@@ -14,6 +15,7 @@ function App() {
         <ReviewSection />
         <FAQSection />
       </div>
+      <FooterSection />
     </main>
   );
 }

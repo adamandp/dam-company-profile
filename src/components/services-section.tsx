@@ -9,7 +9,7 @@ const settings = {
   centerMode: true,
   infinite: true,
   centerPadding: "80px",
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
   speed: 500,
   responsive: [
@@ -91,9 +91,9 @@ export const ServicesSection = () => {
   return (
     <main id="services" className="bg-white">
       <div className="px-c-24 py-c-12 text-black ">
-        <div className="max-w-[1920px] mx-auto relative">
+        <div className="max-w-480 mx-auto relative">
           <header className="bg-[#C6F806] font-phonk text-[clamp(0.8rem,4vw,4rem)] md:py-c-8 -rotate-5 w-[101vw] absolute z-50 top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex flex-wrap items-center justify-evenly max-w-[1920px] mx-auto">
+            <div className="flex flex-wrap items-center justify-evenly max-w-480 mx-auto">
               Advertising <MaskService className="w-c-8 md:w-c-12-5" /> Digital
               <MaskService className="w-c-8 md:w-c-12-5" /> Marketing
             </div>
@@ -132,7 +132,7 @@ export const ServicesSection = () => {
           </div>
         </div>
       </section>
-      <div className="pb-[100px]"></div>
+      <div className="pb-25"></div>
     </main>
   );
 };
